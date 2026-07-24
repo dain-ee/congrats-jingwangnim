@@ -796,6 +796,15 @@ header.hero,section,footer.outro{background:transparent!important;color:var(--in
   .blob{filter:blur(56px);opacity:.28}
   .transfer{height:150vh}
   .cards{width:min(84vw,420px);height:min(34vh,220px)}
+
+  /* 큰 제목은 모바일에서도 한 줄 유지 */
+  .hero__inner,.open .wrap,.thanks .wrap,.ask .wrap{max-width:calc(100vw - 40px)}
+  .hero__title{white-space:nowrap;font-size:min(11.4vw,54px)}
+  .nametag span{white-space:nowrap;font-size:min(9.2vw,52px)}
+  .open .h2{white-space:nowrap;font-size:min(10vw,48px)}
+  .ask__title{white-space:nowrap;font-size:min(8.6vw,42px)}
+  .outro__title{white-space:nowrap;font-size:min(7.4vw,36px)}
+  .outro__title.it{white-space:nowrap;font-size:min(7.8vw,38px)}
 }
 
 @media (prefers-reduced-motion:reduce){
