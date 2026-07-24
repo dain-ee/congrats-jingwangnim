@@ -734,18 +734,40 @@ header.hero,section,footer.outro{background:transparent!important;color:var(--in
 }
 .kk__row.me .kk__b{background:#FFE94D}
 
+/* ── 콘텐츠 폭을 항상 종이(sheet) 안쪽으로 ── */
+.wrap{max-width:min(1180px,calc(92vw - 56px))}
+.hero__inner,.open .wrap,.thanks .wrap,.msg .wrap,section.link .wrap,.ask .wrap{
+  max-width:min(900px,calc(92vw - 88px))
+}
+.chat .wrap{max-width:min(620px,calc(92vw - 88px))}
+.win{max-width:min(760px,calc(92vw - 120px))}
+.marquee{width:min(1120px,92vw)}
+.cards{width:min(72vw,560px)}
+
 /* ── 모바일 마감 ─────────────────────────── */
 @media (max-width:640px){
   .sheet{top:8px;bottom:8px;border-radius:22px}
   .chat .wrap{max-width:100%}
   .kk{border-radius:20px}
-  .kk__b{max-width:calc(100% - 54px);font-size:13.5px}
+  .kk__row>div{min-width:0;flex:0 1 auto}
+  .kk__b{
+    width:-webkit-max-content;width:max-content;
+    max-width:calc(100vw - 118px);font-size:13.5px;word-break:keep-all
+  }
+  .kk__row.me .kk__b{max-width:calc(100vw - 84px)}
   .kk__body{padding:16px 12px;gap:8px}
   .kk__av{width:28px;height:28px;font-size:14px}
   .qm{font-size:22px}
   .nametag span{font-size:clamp(26px,10vw,44px)}
   .hero__sub{font-size:14px}
   .marquee span{font-size:14px}
+  /* 폴더: 겹치지 않게 3열 그리드로 */
+  .thanks__stack{padding-top:4px}
+  .folders{position:static;inset:auto;display:grid;grid-template-columns:repeat(3,1fr);
+    gap:26px 10px;margin:0 0 66px;padding:14px 4px 0;align-items:start}
+  .folder{position:static!important;left:auto!important;right:auto!important;
+    top:auto!important;bottom:auto!important;width:100%}
+  .folder__t{font-size:9.5px}
   .folder__pop .pe{font-size:26px}
   .folder__pop .pt{font-size:10px;padding:4px 9px}
   .thanks__note,.body{font-size:14px;line-height:1.8}
