@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  width:1200px;height:630px;overflow:hidden;background:#FF5A45;
+  font-family:"Pretendard Variable",Pretendard,-apple-system,sans-serif;
+  display:grid;place-items:center;
+}
+.sheet{
+  position:relative;width:1120px;height:560px;background:#FDFCFA;border-radius:34px;
+  overflow:hidden;display:grid;place-items:center;
+  box-shadow:0 30px 80px -30px rgba(16,16,19,.35)
+}
+.blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.34}
+.b1{width:460px;height:460px;background:#FFC9BE;left:-70px;top:-60px}
+.b2{width:420px;height:420px;background:#BEDCFF;right:-60px;bottom:-90px}
+.b3{width:360px;height:360px;background:#E4D8FF;left:38%;bottom:-140px}
+.dots{
+  position:absolute;inset:0;opacity:.3;
+  background-image:radial-gradient(rgba(16,16,19,.2) 1px,transparent 1px);
+  background-size:16px 16px
+}
+.in{position:relative;z-index:2;text-align:center}
+.kicker{
+  font-family:"Space Mono",monospace;font-size:15px;font-weight:700;letter-spacing:.2em;
+  text-transform:uppercase;color:#FF5A45;display:flex;align-items:center;
+  justify-content:center;gap:12px;margin-bottom:26px
+}
+.kicker::before{content:"";width:34px;height:2px;background:currentColor}
+h1{font-size:92px;line-height:.98;letter-spacing:-.045em;color:#101013;font-weight:800}
+.name{
+  margin-top:10px;font-family:"Times New Roman",Times,serif;font-weight:700;
+  font-size:104px;line-height:1;letter-spacing:.01em;color:#fff;
+  text-shadow:
+    -3px -3px 0 #101013, 3px -3px 0 #101013, -3px 3px 0 #101013, 3px 3px 0 #101013,
+    -3px 0 0 #101013, 3px 0 0 #101013, 0 -3px 0 #101013, 0 3px 0 #101013,
+    10px 10px 0 #FF5A45
+}
+.sub{margin-top:30px;font-size:22px;font-weight:600;color:rgba(16,16,19,.62)}
+.stk{position:absolute;font-size:64px;z-index:3;filter:drop-shadow(0 14px 26px rgba(0,0,0,.18))}
+.s1{left:54px;top:62px}
+.s2{right:58px;top:52px;font-size:70px}
+.s3{left:70px;bottom:56px;font-size:56px}
+.s4{right:76px;bottom:50px;font-size:60px}
+.s5{left:47%;top:26px;font-size:44px}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+  <div class="dots"></div>
+  <span class="stk s1">🎉</span>
+  <span class="stk s2">👏</span>
+  <span class="stk s3">💙</span>
+  <span class="stk s4">🎊</span>
+  <span class="stk s5">✨</span>
+  <div class="in">
+    <p class="kicker">For 진광님 · From 다인</p>
+    <h1>이직 축하드려요</h1>
+    <div class="name">JIN GWANG NIM</div>
+    <p class="sub">LOTTE ON &nbsp;→&nbsp; IBM</p>
+  </div>
+</div>
+</body>
+</html>
